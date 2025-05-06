@@ -5,9 +5,10 @@ import {
   GET_TODOS_REQUEST,
   GET_TODOS_SUCCESS,
 } from "../constants/todosConstant";
+import type { Dispatch } from "redux";
 
 //action create
-export const getAllTodos = () => async (dispatch: any) => {
+export const getAllTodos = () => async (dispatch: Dispatch) => {
   dispatch({ type: GET_TODOS_REQUEST });
   try {
     const response = await axios.get(
